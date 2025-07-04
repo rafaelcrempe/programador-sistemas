@@ -19,33 +19,33 @@
 
     <h3>Informações pessoais</h3>
     
-    <form>
+    <form action="./confirmacao-cadastro.html">
         <label>
             Nome completo <br>
-            <input type="text">
+            <input type="text" required>
         </label>
 
         <br><br>
 
         <label>
             Data de nascimento <br>
-            <input type="date">
+            <input type="date" required>
         </label>
 
         <br><br>
 
         <label>
             Endereço <br>
-            <input type="text" placeholder="Rua"> <input type="number" placeholder="Número"><input type="text" placeholder="Bairro">
+            <input type="text" placeholder="Rua" required> <input type="number" placeholder="Número" required><input type="text" placeholder="Bairro" required>
         </label>
 
         <br><br>
 
         <label>
             <strong>Você está se cadastrando para:</strong> <br>
-            <p><input type="radio"> Comprar livros</p>
-            <p><input type="radio"> Vender meus livros</p>
-            <p><input type="radio"> Trocar livros</p>
+            <p><input type="radio" name="motivo"> Comprar livros</p>
+            <p><input type="radio" name="motivo"> Vender meus livros</p>
+            <p><input type="radio" name="motivo"> Trocar livros</p>
         </label>
 
         <br><br>
@@ -53,9 +53,9 @@
         <label>
             <strong>Dados de login</strong><br><br>
             E-mail: <br>
-            <input type="email"> <br><br>
+            <input type="email" required> <br><br>
             Senha: <br>
-            <input type="password"> <br><br>            
+            <input type="password" required minlength="8" placeholder="Mínimo de 8 caracteres"> <br><br>            
         </label>
 
         <label>
@@ -64,7 +64,7 @@
 
         <br><br>
 
-        <a href="./confirmacao-cadastro.html"><button>Salvar e continuar</button></a>
+        <button type="submit">Salvar e continuar</button> 
     </form>
 </body>
 </html>
