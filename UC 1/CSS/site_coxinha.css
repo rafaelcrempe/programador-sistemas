@@ -1,0 +1,64 @@
+/* colocar aqui todos os seletors */ 
+
+/* Paleta de cores:
+    Azul Principal: #2196F3
+    Azul escuro:#1976D2
+    Azul claro: #BBDEFB
+    Rosa: #FF4081
+    Cinza claro: #BDBDBD
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.body {
+    cursor: default; /* muda o cursor para padrão */
+    font-family: "Roboto", sans-serif;
+    margin:0;
+}
+
+.h1 {
+    text-align: center;
+    color: #FFFFFF;
+    cursor:  default;
+}
+
+.textoPrincipal {
+    color: #BDBDBD;
+    font-size: 17px;
+    text-align: center;
+}
+
+.textoAuxiliar {
+    color: #BBDEFB;
+    text-align: center;
+    font-size: 12px;
+}
+
+.fundoCabecalho {
+    background-color: #1976D2;
+    padding: 20px;
+}
+
+.botaoPrincipal {
+    background-color: #C2185B;
+    color: #BBDEFB;
+    font-size: 15px;
+    border: none; /* Remove a borda do botão*/
+    padding: 20px; /* Aumenta o espaço por DENTRO do item*/
+    margin-top: 20px; /* Adiciona espaço por FORA do item*/
+    margin-right: 20px;
+    cursor: pointer; ; /* Muda o cursor para indicar que é clicável | (ctrl + space) abre as opções de cursores */
+    border-radius: 10px; border-radius: 10px; /* Arredonda os cantos do botão | pode ser em pixel ou em porcentagem | 50% arredonda total */
+}
+
+.botaoInvertido{
+    background: trasnparente;
+    border: 3px solid #C2185B; /* adiciona borda no botão*/
+    padding: 20px; 
+    border-radius: 10px;
+    color: #C2185B;
+}
+
+.container{
+    margin-left: 30px;
+}
