@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: #333; /* se você for repetir os números no hexadecimal, pode deixar apenas os 3 primeiros*/
+    margin: 0;
+    
+}
+
+.linksMenu a { /* Podemos utilizar filtros dentro do seletor. Nesse caso, o css se aplica para todos os links dentro da classe */
+    color: #656565;
+    text-decoration: none; /*Remove o traçado padrão de links*/
+    margin-right: 15px;
+    font-size: 13px;
+}
+
+.linksMenu a:hover { /* Define o que acontece com o link quando passamos o mouse em cima*/
+    text-decoration: underline;
+    color: rgb(28, 28, 176);
+    font-weight: bold;
+}
+
+.abertura {
+    background: #6157f7;
+    background: linear-gradient(8deg, rgba(97, 87, 247, 1) 0%, rgba(140, 195, 207, 1) 97%, rgba(0, 212, 255, 1) 100%); /* https://cssgradient.io/ site para testar gradientes*/
+    padding: 200px 50px; /*UM valor aplica em todos os lados, DOIS valores aplicam top/bottom e right/left e QUATRO valores aplica em sentido horário (Topo, direita, baixo, esquerda)*/
+}
+
+.abertura p {
+    color: #353535;
+    width: 500px;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.abertura h2 {
+    font-size: 30px;
+}
+
+.botaoPrincipal {
+    background-color: #6157f7;
+    color: white;
+    font-size: 15px;
+    padding: 15px 50px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+.botaoPrincipal:hover {
+    background-color: #3a3395;
+    color: white;
+    font-size: 15px;
+    padding: 15px 50px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s; /* 0.3s é o padrão*/
+}
+
+.cardProduto {
+    width: 350px;
+    padding: 20px 10px;
+    border: 1px solid #CCC;
+    box-shadow: 1px 2px 5px #CCC; /*Primeiro número é sombra pra direita, segundo é sombra pra baixo, terceiro é o quanto a sombra cresce*/
+    /*Se quiser inverter o lado da sombra, utilizar números negativos*/
+    margin: 50px;
+}
+
+.cardConteudo {
+    padding: 20px;
+    text-align: center;
+}
