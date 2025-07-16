@@ -1,0 +1,18 @@
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /*between mantém colado nas margens da tela, space-around coloca um espaço entre a margem e o item*/
+    align-items: center; /* Alinha todos os itens */
+}
+
+.itensMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px; /* distância entre os itens do flex*/
+}
+
+.configuracaoMenu {
+    display: flex;
+
+}

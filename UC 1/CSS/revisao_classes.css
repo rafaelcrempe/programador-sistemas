@@ -7,6 +7,15 @@ body {
     
 }
 
+.menus {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+
+
 .linksMenu a { /* Podemos utilizar filtros dentro do seletor. Nesse caso, o css se aplica para todos os links dentro da classe */
     color: #656565;
     text-decoration: none; /*Remove o traçado padrão de links*/
@@ -20,10 +29,13 @@ body {
     font-weight: bold;
 }
 
+
+
 .abertura {
     background: #6157f7;
     background: linear-gradient(8deg, rgba(97, 87, 247, 1) 0%, rgba(140, 195, 207, 1) 97%, rgba(0, 212, 255, 1) 100%); /* https://cssgradient.io/ site para testar gradientes*/
     padding: 200px 50px; /*UM valor aplica em todos os lados, DOIS valores aplicam top/bottom e right/left e QUATRO valores aplica em sentido horário (Topo, direita, baixo, esquerda)*/
+    margin-top: 20px;
 }
 
 .abertura p {
@@ -41,8 +53,8 @@ body {
     background-color: #6157f7;
     color: white;
     font-size: 15px;
-    padding: 15px 50px;
-    border-radius: 50px;
+    padding: 10px 50px;
+    border-radius: 5px;
     border: none;
     cursor: pointer;
 }
@@ -51,22 +63,42 @@ body {
     background-color: #3a3395;
     color: white;
     font-size: 15px;
-    padding: 15px 50px;
-    border-radius: 50px;
+    padding: 10px 50px;
+    border-radius: 5px;
     cursor: pointer;
     transition: 0.3s; /* 0.3s é o padrão*/
 }
 
 .cardProduto {
-    width: 350px;
-    padding: 20px 10px;
+    width: 300px;
     border: 1px solid #CCC;
     box-shadow: 1px 2px 5px #CCC; /*Primeiro número é sombra pra direita, segundo é sombra pra baixo, terceiro é o quanto a sombra cresce*/
     /*Se quiser inverter o lado da sombra, utilizar números negativos*/
     margin: 50px;
 }
 
-.cardConteudo {
-    padding: 20px;
-    text-align: center;
+.cardProduto img {
+    width: 100%; /* Ajusta a imagem pro tamanho máximo do pai*/
 }
+
+.cardConteudo {
+    padding: 10px;
+}
+
+.cardConteudo .botaoPrincipal { /* É possivel chamar uma classe dentro de outra classe */
+    width: 100%;
+}
+
+.cardConteudo .textoTitulo {
+  font-size: 20px;
+  font-weight: bold; /* vai de 0 a 900 (de 100 em 100) */
+  margin: 0;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+

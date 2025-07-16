@@ -48,17 +48,28 @@ h1 {
     margin-top: 20px; /* Adiciona espaço por FORA do item*/
     margin-right: 20px;
     cursor: pointer; ; /* Muda o cursor para indicar que é clicável | (ctrl + space) abre as opções de cursores */
-    border-radius: 10px; border-radius: 10px; /* Arredonda os cantos do botão | pode ser em pixel ou em porcentagem | 50% arredonda total */
+    border: 3px solid #C2185B;
+    border-radius: 10px; /* Arredonda os cantos do botão | pode ser em pixel ou em porcentagem | 50% arredonda total */
 }
 
 .botaoInvertido{
-    background: trasnparente;
-    border: 3px solid #C2185B; /* adiciona borda no botão*/
+    background: transparent;
+    border: none;
     padding: 20px; 
     border-radius: 10px;
     color: #C2185B;
+    margin-top: 20px;
+    margin-right: 20px;
+    border: 3px solid #C2185B; /* adiciona borda no botão*/
 }
 
 .container{
     margin-left: 30px;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
