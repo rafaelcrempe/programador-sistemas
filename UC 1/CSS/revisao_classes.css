@@ -10,10 +10,15 @@ body {
 .menus {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; 
+    justify-content: space-around; 
     align-items: center;
 }
 
+.linksMenu {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
 
 
 .linksMenu a { /* Podemos utilizar filtros dentro do seletor. Nesse caso, o css se aplica para todos os links dentro da classe */
@@ -28,7 +33,6 @@ body {
     color: rgb(28, 28, 176);
     font-weight: bold;
 }
-
 
 
 .abertura {
