@@ -1,0 +1,242 @@
+body {
+        margin-top: none;
+}
+
+
+.barraTopo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.navegacao {
+    display: flex;
+    flex: row;
+    height: 100px;
+}
+
+.navegacao button {
+    background-color: transparent;
+    height: 100%;
+    border: none;
+    border: 1px solid #ccc
+}
+
+.navegacao .inicio {
+    background-color: rgb(226, 86, 86);
+    cursor: pointer;
+}
+
+.navOutros:hover {
+    background-color: rgb(226, 86, 86);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s; /* 0.3s é o padrão*/
+}
+
+.viagem {
+    background-image: url("./imagens/bg_1.jpg");
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+}
+
+.formularioHospedes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+    width: 100%;
+
+}
+
+.formularioDatas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+    width: 100%;
+}
+
+.subtextoFormulario {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+    width: 100%;
+    gap: 20px;
+}
+
+
+.formularioCompleto {
+    background-color: whitesmoke;
+    height: 200px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.disponibilidade {
+    background-color: rgb(226, 86, 86);
+    border: none;
+}
+
+.disponibilidade:hover {
+    background-color: rgb(224, 71, 71);
+    border: none;
+}
+
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    background-color: rgb(226, 86, 86);
+    color: whitesmoke;
+}
+
+.subscribe h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.subscribe p {
+    margin-top: 0;
+    font-size: 25px;
+}
+
+.subscribe button {
+    background-color: rgb(226, 86, 86);
+    color: whitesmoke;
+    height: 50px;
+    width: 150px;
+    border: none;
+    border: 1px solid whitesmoke;
+}
+
+.subscribe button:hover {
+    background-color: whitesmoke;
+    color: rgb(226, 86, 86);
+    height: 50px;
+    width: 150px;
+}
+
+.servicos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.cardServico {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardServico img {
+    width: 100%;
+}
+
+.cardServico:hover {
+    border: 1px solid #CCC;
+    
+}
+
+.pacotes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+    background-color: #CCC;
+    height: 500px;
+}
+
+.pacotesCompletos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.cardPacotes {
+    border-color: black;
+    border: 1px solid;
+}
+
+
+
+.cardDestinos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+
+.contato {
+    background-image: url("./imagens/bg_3.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    margin-top: 0;
+    gap: 30px;
+}
+
+.formContato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    height: 450px;
+    width: 400px;
+    gap: 5px;
+
+
+}
+
+
+.formContato > * { /* > * faz o CSS se aplicar a tudo que está dentro daquela classe, independente da tag*/
+    width: 300px;
+    background-color: #cccccc79;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+    height: 70px;
+  
+}
+
+.formContato button {
+    background-color: rgb(226, 86, 86);
+    color: whitesmoke;
+}
+
+.formContato textarea {
+    height: 100%;
+}
+
