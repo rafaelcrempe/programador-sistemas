@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 01 - Inputs</title>
+
+    <link rel="icon" type="image/x-icon" href="https://placehold.co/20"> <!-- placeholder do ícone da página para evitar erros de exibição do script no console-->
+</head>
+<body>
+    
+    <script>
+
+        let nome 
+        let sobrenome
+        
+        nome = prompt("Digite o nome do funcionário: ") 
+        sobrenome = prompt("Digite o sobrenome: ")
+
+        let nomeCompleto = nome + " " + sobrenome
+
+        alert("Seja bem vindo(a) " + nomeCompleto)
+
+        let salario = prompt("Digite o salário de "+nome)
+        salario = parseInt(salario) // parse serve para converter valores. parseInt transforma o texto em número inteiro.
+        let bonificacao = prompt("Digite a bonificação de "+nome)
+        bonificacao = parseInt(bonificacao)
+        
+
+        const salarioTotal = salario + bonificacao //const é mais seguro para evitar alterações nos bancos de dados via console do navegador
+        alert("O salário total de "+nome + " é R$ "+salarioTotal + ",00.")
+    </script>
+
+</body>
+</html>
