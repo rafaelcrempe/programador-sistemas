@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão</title>
+</head>
+<body>
+    
+    <script>
+
+        // Revisão da aula 01: Variáveis
+        console.log("Revisão de JavaScript") // Mostra a mensagem no console do navegador
+
+        // alert("Sucesso!\nSeu cadastro foi realizado com sucesso.") // Cria uma mensagem na tela e trava o navegador
+
+        let tomate = prompt("Digite o preço do tomate: ")
+        tomate = parseFloat(tomate) 
+
+        let hamburger = parseFloat(prompt("Digite o preço do hamburger: ")) // podemos juntar comandos: cria a variavel, pergunta o valor e já transforma em número
+
+        let queijo = parseFloat(prompt("Digite o preço do queijo: "))
+
+        alert("Cardápio:\nTomate: R$ " + tomate + "\nHamburguer: R$ " + hamburger + "\nQueijo: R$ " + queijo)
+
+
+        let preco_custo = tomate + hamburger + queijo
+        alert("O preço de custo é: R$ " + preco_custo.toFixed(2))
+
+        let margem_lucro = 50 //Isso é porcentagem
+        let preco_venda = margem_lucro * (preco_custo / 100) + preco_custo
+        alert("O preço final do produto será R$: " + preco_venda.toFixed(2)) // .toFixed(2) exibe o resultado em uma quantidade fixa de caracteres, nesse caso: 2
+    </script>
+
+
+</body>
+</html>

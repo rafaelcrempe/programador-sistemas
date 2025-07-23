@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botões com JavaScript</title>
+</head>
+<body>
+
+    <h1>Funcionalidade nos botões</h1>
+    <p>Clique no botão para ver uma mensagem</p>
+    <button onclick="mostrarMensagem()" >Clique em mim!</button>
+    <button onclick="mostrarCardapio()">Ver cardápio</button>
+
+    <script>
+       
+        function mostrarMensagem () {
+           let nome = "Rafael"
+           alert("Seja bem vindo(a), "+ nome + "!")
+        }
+
+        function mostrarCardapio () {
+            alert("Cardápio:\nDog Simples: R$ 20,00")
+            mostrarMensagem()
+            mostrarCardapio()
+        }
+        
+    </script>
+
+</body>
+</html>

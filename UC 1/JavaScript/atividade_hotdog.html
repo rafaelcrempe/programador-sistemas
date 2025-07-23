@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade do Hot Dog</title>
+</head>
+<body>
+    
+
+    <script>
+
+        let salsicha = parseFloat(prompt("Digite o preço da unidade de salsicha: "))
+        let pure_batata = parseFloat(prompt("Digite o preço da porção unitária de purê de batata: "))
+        let salada = parseFloat(prompt("Digite o preço da porção de salada: "))
+
+        const pao = 1.15
+        const batata_palha = 0.95
+
+        let simples = pao + salsicha + pure_batata + batata_palha
+        let duplo = pao  + (salsicha *2) + pure_batata + salada + batata_palha
+        let especial = pao + (salsicha * 3) + (pure_batata * 2) + salada + batata_palha
+
+        alert("Cardápio\n\nDog Simples: R$ " + simples.toFixed(2) + "\nDog Duplo: R$ " + duplo.toFixed(2) + "\nDog Especial: R$ " + especial.toFixed(2))
+
+
+    </script>
+
+</body>
+</html>
