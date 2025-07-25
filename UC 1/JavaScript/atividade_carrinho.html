@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercadinho do Rafael</title>
+</head>
+<body>
+    <h1>Mercadinho do Rafael</h1>
+    <hr/>
+
+    <p>Arroz - R$ 15,90</p>
+    <button onclick="adicionarArroz()">Adicionar</button>
+    <button onclick="removerArroz()">Remover</button>
+    <hr/>
+
+    <p>Feijão - R$ 11,40</p>
+    <button onclick="adicionarFeijao()">Adicionar</button>
+    <button onclick="removerFeijao()">Remover</button>
+    <hr/>
+
+    <h2>Seu carrinho</h2>
+    <button onclick="verCarrinho()">Ver carrinho</button>
+    <button onclick="limparCarrinho()">Limpar carrinho</button>
+
+    <script>
+        
+        let itens_carrinho, total_arroz, total_feijao, total_compra
+        let item_arroz = 0, item_feijao = 0
+
+        const preco_arroz = 15.90, preco_feijao = 11.40
+
+
+
+        function adicionarArroz() {
+            item_arroz++
+        }
+
+        function removerArroz() {
+            item_arroz--
+        }
+
+        function adicionarFeijao() {
+            item_feijao++
+        }
+
+        function removerFeijao() {
+            item_feijao--
+        }
+
+        function verCarrinho() {
+            total_arroz = item_arroz * preco_arroz
+            total_feijao = item_feijao * preco_feijao
+            total_compra = total_arroz + total_feijao
+            itens_carrinho = item_arroz + item_feijao
+
+            alert("Itens no carrinho: " + itens_carrinho + 
+                "\nQuantidade de arroz: " + item_arroz + " | Preco total: R$ " + total_arroz.toFixed(2) + 
+                "\nQuantidade de feijão: " + item_feijao + " | Preco total: R$  " + total_feijao.toFixed(2) +
+                "\n\n Total da compra: R$ " + total_compra.toFixed(2)
+            )
+        }
+
+        function limparCarrinho() {
+            item_arroz = 0
+            item_feijao = 0
+        }
+        
+
+    </script>
+
+
+</body>
+</html>

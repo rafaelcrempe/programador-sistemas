@@ -5,24 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade do Hot Dog</title>
 </head>
+
 <body>
+
+    <h1>Atividade do Hotdog</h1>
+
+    <p>Digite o valor da salsicha:</p>
+    <input type="text" id="inputSalsicha"> <!--atribuir id para poder utilizar na função-->
+    <br>
+    <p>Digite o valor do purê de batata:</p>
+    <input type="text" id="inputPure">
+    <br>
+    <p>Digite o valor da salada:</p>
+    <input type="text" id="inputSalada">
+    <br><br>
+
+    <button id="atualizarCardapio" onclick="atualizarCardapio()">Atualizar cardápio</button>
+    <hr/>
+
+    <h2>Cardápio</h2>
+    
+    <ul>
+        <li><strong>Dog simples: </strong><span id="textoDogSimples">...</span></li> <!--utilizar span para poder substituir apenas parte do texto posteriormente com javascript-->
+        <li><strong>Dog duplo: </strong><span id="textoDogDuplo">...</span></li>
+        <li><strong>Dog especial: </strong><span id="textoDogEspecial">...</span></li>
+    </ul>
+
+
     
 
     <script>
 
-        let salsicha = parseFloat(prompt("Digite o preço da unidade de salsicha: "))
-        let pure_batata = parseFloat(prompt("Digite o preço da porção unitária de purê de batata: "))
-        let salada = parseFloat(prompt("Digite o preço da porção de salada: "))
+        let salsicha, pure_batata, salada
+        let simples, duplo, especial // variáveis podem ser criadas dentro da função, mas não poderiam ser reutilizadas fora dela.
 
-        const pao = 1.15
-        const batata_palha = 0.95
 
-        let simples = pao + salsicha + pure_batata + batata_palha
-        let duplo = pao  + (salsicha *2) + pure_batata + salada + batata_palha
-        let especial = pao + (salsicha * 3) + (pure_batata * 2) + salada + batata_palha
+        function atualizarCardapio() {
 
-        alert("Cardápio\n\nDog Simples: R$ " + simples.toFixed(2) + "\nDog Duplo: R$ " + duplo.toFixed(2) + "\nDog Especial: R$ " + especial.toFixed(2))
+            salsicha = document.querySelector("#inputSalsicha").value
+            salsicha = parseFloat(salsicha)
 
+            pure_batata = document.querySelector("#inputPure").value
+            pure_batata = parseFloat(pure_batata)
+
+            //também pode ser escrito como pure_batata = parseFloat(document.querySelector("#inputPure").value)
+
+            salada = document.querySelector("#inputSalada").value
+            salada = parseFloat(salada)
+            
+            const pao = 1.15
+            const batata_palha = 0.95
+
+            simples = pao + salsicha + pure_batata + batata_palha
+            duplo = pao  + (salsicha *2) + pure_batata + salada + batata_palha
+            especial = pao + (salsicha * 3) + (pure_batata * 2) + salada + batata_palha
+
+            document.querySelector("#inputSalsicha").value = " " // limpa o campo de digitação após a execução da função
+            document.querySelector("#inputPure").value = " "
+            document.querySelector("#inputSalada").value = " "
+
+            document.querySelector("#textoDogSimples").innerHTML = simples.toFixed(2) //.innerHTML substitui o texto anterior pelo indicado aqui
+            document.querySelector("#textoDogDuplo").innerHTML = duplo.toFixed(2)
+            document.querySelector("#textoDogEspecial").innerHTML = especial.toFixed(2)
+
+        }
 
     </script>
 

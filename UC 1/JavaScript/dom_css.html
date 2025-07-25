@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipular CSS com JavaScript</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> <!-- animações de div no site animate.style-->
+
+</head>
+<body>
+    
+    <div id="telaInicial" class="animate__animated animate__fadeIn animate__delay-1s">
+        <h1>Cadastro</h1>
+
+        <button onclick="mostrarUsuario()">Cadastro de usuário</button>
+        <br/>
+        <button onclick="mostrarEmpresa()">Cadastro de empresa</button>
+    </div>
+
+    <div id="usuario" >
+        <h2>Usuários</h2>
+        <p>Esse é o cadastro de usuários</p>
+        <button onclick="mostrarInicio()">Voltar</button>
+    </div>
+
+    <div id="empresa">
+        <h2>Empresa</h2>
+        <p>Esse é o cadastro de uma empresa</p>
+        <button onclick="mostrarInicio()">Voltar</button>
+    </div>
+
+
+    <script>
+
+        mostrarInicio()
+
+        function esconderTodos() {
+            // document.querySelector("#usuario").style.color = "red"
+            // document.querySelector("#usuario").style.backgroundColor = "yellow" // quando o estilo é composto, o traço não é aceito e devemos usar sem traço com maiúscula
+            // document.querySelector("#usuario").style.fontSize = "20px"
+            
+            document.querySelector("#usuario").style.display = "none"
+            document.querySelector("#empresa").style.display = "none"
+            document.querySelector("#telaInicial").style.display = "none"
+
+        }
+
+        function mostrarInicio(){
+            esconderTodos()
+            document.querySelector("#telaInicial").style.display = "block" // block é o display padrão do HTML
+        }
+
+        function mostrarUsuario() {
+            esconderTodos()
+            document.querySelector("#usuario").style.display = "block"
+        }
+
+        function mostrarEmpresa() {
+            esconderTodos()
+            document.querySelector("#empresa").style.display = "block"
+        }
+
+
+
+    </script>
+
+</body>
+</html>
