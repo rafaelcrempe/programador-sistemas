@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de Texto com JavaScript</title>
+</head>
+<body>
+    
+    <input placeholder="Digite o nome: "><br/>
+    <input placeholder="Digite a idade: "><br/>
+    <input placeholder="Digite o CPF: "><br/>
+    <input placeholder="Digite o e-mail: "><br/>
+    <button onclick="validarDados()">Salvar</button>
+
+
+
+
+    <script>
+
+
+
+        function validarDados(){
+
+            let nome = document.querySelectorAll("input")[0].value //seleciona todos os inputs e coloca numa lista que se inicia no número 0
+            let idade = parseInt(document.querySelectorAll("input")[1].value)
+            let cpf = document.querySelectorAll("input")[2].value
+            let email = document.querySelectorAll("input")[3].value
+            
+            if(nome.length < 3) { //LENGTH conta quantos caracteres tem na variável
+                alert("O nome digitado é muito curto!")
+                return
+            }
+
+            if (isNaN(idade) == true) { // função isNaN verifica se o valor NÃO É UM NÚMERO
+                alert("Digite uma idade válida!")
+            }
+
+            if(idade > 120 || idade < 12){
+                alert("Idade inválida, deve ser maior que 12 e menor que 120!")
+                return
+            }
+
+            if(isNaN(cpf) == true) {
+                alert("Digite um CPF válido (apenas números)")
+                return
+            }
+
+            if(cpf.length != 11){
+                alert("O CPF deve ter 11 dígitos")
+                return
+            }
+
+            if(email.includes("@") == false || email.includes(".") == false) {
+                alert("E-mail inválido")
+                return
+            }
+
+            alert("Cadastro realizado com sucesso!")
+
+
+        }
+
+    </script>
+
+</body>
+</html>
